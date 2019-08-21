@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
-const activeCardColour = Color(0xFF1D1E33);
+import 'constants.dart';
 
 class ReusableCard extends StatelessWidget {
-  ReusableCard({this.colour = activeCardColour, this.cardChild, this.onPress});
+  ReusableCard({this.colour = kActiveCardColour, this.cardChild, this.onPress});
 
   final Color colour;
   final Widget cardChild;

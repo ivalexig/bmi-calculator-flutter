@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-
-const labelTextStyle = TextStyle(
-  fontSize: 18.0,
-  color: Color(0xFF8D8E98),
-);
-
-const iconSize = 80.0;
+import 'constants.dart';
 
 class IconContent extends StatelessWidget {
   IconContent({this.icon, this.label});
@@ -20,12 +14,12 @@ class IconContent extends StatelessWidget {
       children: <Widget>[
         Icon(
           icon,
-          size: iconSize,
+          size: kIconSize,
         ),
         SizedBox(height: 15.0),
         Text(
           label,
-          style: labelTextStyle,
+          style: kLabelTextStyle,
         )
       ],
     );

@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
-
-const bottonContainerHeight = 80.0;
-const bottomContainerColour = Color(0xFFEB1555);
-const inactiveCardColour = Color(0xFF111328);
-const activeCardColour = Color(0xFF1D1E33);
+import 'constants.dart';
 
 enum Gender { male, female }
 
@@ -37,8 +33,8 @@ class _InputPageState extends State<InputPage> {
                         });
                       },
                       colour: selectedGender == Gender.male
-                          ? activeCardColour
-                          : inactiveCardColour,
+                          ? kActiveCardColour
+                          : kInactiveCardColour,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.mars,
                         label: 'MALE',
@@ -53,8 +49,8 @@ class _InputPageState extends State<InputPage> {
                         });
                       },
                       colour: selectedGender == Gender.female
-                          ? activeCardColour
-                          : inactiveCardColour,
+                          ? kActiveCardColour
+                          : kInactiveCardColour,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.venus,
                         label: 'FEMALE',
@@ -80,10 +76,10 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             Container(
-              color: bottomContainerColour,
+              color: kBottomContainerColour,
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
-              height: bottonContainerHeight,
+              height: kBottonContainerHeight,
             )
           ],
         ));
